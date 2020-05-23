@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "project-hat": {
+    "hat-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project-hat",
+            "outputPath": "dist/hat-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "project-hat:build"
+            "browserTarget": "hat-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "project-hat:build:production"
+              "browserTarget": "hat-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project-hat:build"
+            "browserTarget": "hat-project:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "project-hat:serve"
+            "devServerTarget": "hat-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "project-hat:serve:production"
+              "devServerTarget": "hat-project:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "project-hat"
+  "defaultProject": "hat-project"
 }
