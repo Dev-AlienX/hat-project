@@ -24,9 +24,9 @@ export class HomeComponent implements OnInit {
       const offset = this.window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
     console.log(offset);
     if(this.scrollValue > offset) {
-      console.log("scroll up");
+      // console.log("scroll up");
     } else {
-      console.log("scroll down");
+      // console.log("scroll down");
       
     }
     this.scrollValue = offset;
