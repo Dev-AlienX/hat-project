@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 
 import * as appState from './store/app.reducer';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +14,8 @@ import * as appState from './store/app.reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot(appState.appReducer)
+    StoreModule.forRoot(appState.appReducer),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
