@@ -5,6 +5,19 @@ nav {
   height: 60px;
   margin: 20px 0px;
   align-items: center;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+
+  &.top {
+    height: 0px;
+    top: -60px;
+  }
 
   div.brand {
     height: fit-content;

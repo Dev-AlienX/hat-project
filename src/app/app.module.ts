@@ -9,6 +9,7 @@ import * as appState from './store/app.reducer';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { WINDOW_PROVIDERS } from './service/window.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { ServicesComponent } from './pages/services/services.component';
     StoreModule.forRoot(appState.appReducer),
     SharedModule
   ],
-  providers: [],
+  providers: [ WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
