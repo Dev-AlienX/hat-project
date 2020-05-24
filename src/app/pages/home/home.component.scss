@@ -1,0 +1,17 @@
+.home {
+    height: 100vh;
+    padding: 8rem 0;
+    
+    .container {
+        // width: 100vw;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
