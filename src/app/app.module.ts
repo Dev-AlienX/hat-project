@@ -7,9 +7,13 @@ import { StoreModule } from '@ngrx/store';
 
 import * as appState from './store/app.reducer';
 import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './pages/home/home.component';
+import { ServicesComponent } from './pages/services/services.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
