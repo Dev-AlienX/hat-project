@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "hat-project": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hat-project"
+    }
+  },
+  "defaultProject": "hat-project",
+  "cli": {
+    "analytics": "a7d1b433-464a-4759-bf43-48c1da3c9a77"
+  }
 }
