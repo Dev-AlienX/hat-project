@@ -12,7 +12,7 @@ import { WINDOW } from 'src/app/service/window.service';
 })
 export class HomeComponent implements OnInit {
 
-  data = of(0);
+  index = of(0);
   dataArray= ["rahul", "devaraj", "Me", "You"];
 
   constructor(private renderer: Renderer2, 
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
 
     } );
 
-    this.data = interval(2000).pipe(map(n => n % this.dataArray.length));
+    this.index = interval(2000).pipe(map(n => n % this.dataArray.length));
   }
 
 }
