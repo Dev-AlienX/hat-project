@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { observable, interval, of } from 'rxjs';
+import { switchMap, map } from 'rxjs/operators';
+
 import { WINDOW } from 'src/app/service/window.service';
 
 @Component({
@@ -9,8 +12,9 @@ import { WINDOW } from 'src/app/service/window.service';
 })
 export class HomeComponent implements OnInit {
 
+  index = of(0);
+  dataArray= ["rahul", "devaraj", "Me", "You"];
 
-  @ViewChild('scroll') rt: ElementRef;
   constructor(private renderer: Renderer2, 
     @Inject(DOCUMENT) private document: Document,
     @Inject(WINDOW) private window: Window) {
@@ -32,6 +36,8 @@ export class HomeComponent implements OnInit {
     this.scrollValue = offset;
 
     } );
+
+    this.index = interval(2000).pipe(map(n => n % this.dataArray.length));
   }
 
 }
