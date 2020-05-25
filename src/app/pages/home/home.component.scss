@@ -36,6 +36,16 @@
                     font-weight: 500;
                     color: red;
                 }
+                
+                .showData {
+                    animation-name: dataShow;
+                    animation-duration: 4s;
+                }
+
+                .hideData {
+                    animation-name: dataHide;
+                    animation-duration: 4s;
+                }
             }
         }
 
@@ -49,4 +59,15 @@
             }
         }
      }
+}
+
+
+@keyframes dataShow {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+@keyframes dataHide {
+    from {background-color: black;}
+    to {background-color: yellow;}
 }

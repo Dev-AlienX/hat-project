@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   index = of(0);
   dataArray= ["vishal ChuneWala", "vishal milk", "vishal oil", "ganesh", "100+ Startups"];
-
+  showClass = true;
   constructor(private renderer: Renderer2, 
     @Inject(DOCUMENT) private document: Document,
     @Inject(WINDOW) private window: Window) {
@@ -23,21 +23,11 @@ export class HomeComponent implements OnInit {
    scrollValue = 0;
 
   ngOnInit(): void {
-    this.renderer.listen('window', 'scroll', (event)=>{
-      // debugger
-      const offset = this.window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
-    console.log(offset);
-    if(this.scrollValue > offset) {
-      // console.log("scroll up");
-    } else {
-      // console.log("scroll down");
-      
-    }
-    this.scrollValue = offset;
 
-    } );
-
-    this.index = interval(2000).pipe(map(n => n % this.dataArray.length));
+    this.index = interval(2000).pipe(map(n => {
+      this.showClass != this.showClass;
+     return n % this.dataArray.length
+    }));
   }
 
 }
