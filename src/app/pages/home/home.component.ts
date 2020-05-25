@@ -13,11 +13,11 @@ import { WINDOW } from 'src/app/service/window.service';
 export class HomeComponent implements OnInit {
 
   index = of(0);
-  dataArray= ["vishal ChuneWala", "vishal milk", "vishal oil", "ganesh", "100+ Startups"];
+  dataArray = ['Vishal VadaPav', 'Ganesh Goods&Service', 'Deva Devalopers', '100+ Startups'];
   showClass = true;
-  constructor(private renderer: Renderer2, 
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window) {
+  constructor(private renderer: Renderer2,
+              @Inject(DOCUMENT) private document: Document,
+              @Inject(WINDOW) private window: Window) {
    }
 
    scrollValue = 0;
@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.index = interval(2000).pipe(map(n => {
-      this.showClass != this.showClass;
-     return n % this.dataArray.length
+      this.showClass !== this.showClass;
+      return n % this.dataArray.length;
     }));
   }
 

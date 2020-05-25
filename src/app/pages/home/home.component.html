@@ -5,9 +5,20 @@
           <h1>
             A Billion Lives
           </h1>
-          <span class="centercolumndownspan"> through 
+          <div class="centercolumndownspan content">
+            <div class="content__container">
+              <p class="content__container__text">
+                Through
+              </p>
+              <ul class="content__container__list">
+                <li class="content__container__list__item dataColor" *ngFor="let item of dataArray">{{item}}</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- <span class="centercolumndownspan"> through 
             <span [ngClass]="showClass == true ?'showData': 'hideData'"  class="dataColor"> {{dataArray[index | async]}} </span>
-          </span>
+          </span> -->
         </div>
         
         <div class="lowerColumn">
