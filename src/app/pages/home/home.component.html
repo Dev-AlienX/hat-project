@@ -6,7 +6,7 @@
             A Billion Lives
           </h1>
           <span class="centercolumndownspan"> through 
-            <span class="dataColor"> {{dataArray[index | async]}} </span>
+            <span [ngClass]="showClass == true ?'showData': 'hideData'"  class="dataColor"> {{dataArray[index | async]}} </span>
           </span>
         </div>
         
