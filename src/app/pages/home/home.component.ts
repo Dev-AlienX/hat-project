@@ -13,7 +13,7 @@ import { WINDOW } from 'src/app/service/window.service';
 export class HomeComponent implements OnInit {
 
   index = of(0);
-  dataArray= ["rahul", "devaraj", "Me", "You"];
+  dataArray= ["vishal ChuneWala", "vishal milk", "vishal oil", "ganesh", "100+ Startups"];
 
   constructor(private renderer: Renderer2, 
     @Inject(DOCUMENT) private document: Document,

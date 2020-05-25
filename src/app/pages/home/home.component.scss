@@ -1,3 +1,52 @@
 .home {
     height: 100vh;
+    display: flex;
+    align-items: center;
+     
+    .column {
+        width: 100%;
+        display: flex; 
+        align-items: center; 
+        flex-direction: column;
+
+        .centerColumn {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .homeContaintMargin {
+                margin-bottom: 29px;
+                font-size: 22px;
+                line-height: 32px;
+            }
+
+            h1 {
+                text-align: center; 
+                font-size: 100px!important; 
+                line-height: 110px;
+                font-weight: 900;
+            }
+
+            .centercolumndownspan {
+                margin-top: 29px;
+                font-size: 22px;
+                line-height: 32px;
+
+                .dataColor {
+                    font-weight: 500;
+                    color: red;
+                }
+            }
+        }
+
+        .lowerColumn {
+            position: absolute; 
+            bottom: 3rem; 
+            text-align: center;
+
+            span {
+                line-height: 30px;
+            }
+        }
+     }
 }
