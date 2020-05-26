@@ -14,28 +14,34 @@
       align-items: center;
       flex-direction: column;
 
-            .centercolumndownspan {
-                margin-top: 29px;
-                font-size: 22px;
-                line-height: 32px;
+      .homeContaintMargin {
+        margin-bottom: 29px;
+        font-size: 22px;
+        line-height: 32px;
+      }
 
-                .dataColor {
-                    font-weight: 500;
-                    color: red;
-                    span {
-                        animation-name: dataShow;
-                    animation-duration: 1s;
-                    }
-                }
-                
-                // .showData {
-                    
-                // }
+      h1 {
+        text-align: center;
+        font-size: 100px !important;
+        line-height: 110px;
+        font-weight: 900;
+      }
 
-                // .hideData {
-                //     animation-name: dataHide;
-                //     animation-duration: 1s;
-                // }
+      .centercolumndownspan {
+        margin-top: 29px;
+        font-size: 22px;
+        line-height: 32px;
+
+        .dataColor {
+            font-weight: 500;
+            color: red;
+            span {
+                -webkit-animation-name: change;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: change;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
             }
         }
 
