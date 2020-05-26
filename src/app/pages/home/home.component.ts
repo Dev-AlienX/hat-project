@@ -1,33 +1,62 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { observable, interval, of } from 'rxjs';
-import { switchMap, map } from 'rxjs/operators';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  AfterViewInit
+} from '@angular/core';
 
-import { WINDOW } from 'src/app/service/window.service';
+import {
+  interval,
+} from 'rxjs';
+
+
+import {
+  WINDOW
+} from 'src/app/service/window.service';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
-  index = of(0);
-  dataArray= ["vishal ChuneWala", "vishal milk", "vishal oil", "ganesh", "100+ Startups"];
+  index;
+  startUpName = ["vishal ChuneWala", "vishal milk", "vishal oil", "ganesh", "100+ Startups"];
   showClass = true;
-  constructor(private renderer: Renderer2, 
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window) {
-   }
 
-   scrollValue = 0;
+  @ViewChild("dataChange") data: ElementRef;
+
+  constructor(private renderer: Renderer2) {}
+
+  scrollValue = 0;
 
   ngOnInit(): void {
 
-    this.index = interval(2000).pipe(map(n => {
-      this.showClass != this.showClass;
-     return n % this.dataArray.length
-    }));
+
+  }
+
+  ngAfterViewInit() {
+    interval(2000).subscribe((n) => {
+      console.log(this.data);
+      this.index = n % this.startUpName.length
+      this.addElement();
+    })
+  }
+
+  addElement() {
+    const p: HTMLParagraphElement = this.renderer.createElement('span');
+    p.innerHTML = this.startUpName[this.index];
+    const childElements = this.data.nativeElement.children;
+    debugger;
+    if (childElements.length != 0) {
+      for (let child of childElements) {
+        this.renderer.removeChild(this.data.nativeElement, child);
+      }
+    }
+    this.renderer.appendChild(this.data.nativeElement, p);
   }
 
 }

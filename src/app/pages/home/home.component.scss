@@ -35,17 +35,20 @@
                 .dataColor {
                     font-weight: 500;
                     color: red;
+                    span {
+                        animation-name: dataShow;
+                    animation-duration: 1s;
+                    }
                 }
                 
-                .showData {
-                    animation-name: dataShow;
-                    animation-duration: 4s;
-                }
+                // .showData {
+                    
+                // }
 
-                .hideData {
-                    animation-name: dataHide;
-                    animation-duration: 4s;
-                }
+                // .hideData {
+                //     animation-name: dataHide;
+                //     animation-duration: 1s;
+                // }
             }
         }
 
