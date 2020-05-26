@@ -12,10 +12,6 @@ import {
 } from 'rxjs';
 
 
-import {
-  WINDOW
-} from 'src/app/service/window.service';
-
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
