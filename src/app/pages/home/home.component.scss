@@ -22,7 +22,7 @@
 
       h1 {
         text-align: center;
-        font-size: 100px !important;
+        font-size: 80px !important;
         line-height: 110px;
         font-weight: 900;
       }
@@ -36,12 +36,13 @@
             font-weight: 500;
             color: red;
             span {
+              display: inline-block;
                 -webkit-animation-name: change;
-            -webkit-animation-duration: 2s;
-            -webkit-animation-iteration-count: infinite;
-            animation-name: dataShow;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-iteration-count: infinite;
+                animation-name: dataShow;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
             }
         }
 
@@ -332,14 +333,32 @@
 
 
 @keyframes dataShow {
-  from {
-    background-color: red;
+ 
+  0%{
+    transform: translate3d(0, 0, 0);
   }
 
-  to {
-    background-color: yellow;
+  25% {
+    transform: translate3d(0, -25%, 0);
+  }
+
+  // 50% {
+    // transform: translate3d(0, -50%, 0);
+  // }
+
+ 75% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  80% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
+
 
 @keyframes dataHide {
   from {

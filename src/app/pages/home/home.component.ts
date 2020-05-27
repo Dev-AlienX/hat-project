@@ -20,7 +20,7 @@ import {
 export class HomeComponent implements OnInit, AfterViewInit {
 
   index;
-  startUpName = ["vishal ChuneWala", "vishal milk", "vishal oil", "ganesh", "100+ Startups"];
+  startUpName = ["User Research", "User Experience", "Brand strategy + identiy", "Web/App Development"];
   showClass = true;
 
   @ViewChild("dataChange") data: ElementRef;
