@@ -1,8 +1,14 @@
 @media (min-width: 1200px) {
   main {
       height: 300vh;
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
   }
+}
+
+
+header{
+  display: inline-block;
+  height: auto;
 }
