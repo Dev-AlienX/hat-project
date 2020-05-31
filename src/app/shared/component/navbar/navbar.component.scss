@@ -1,14 +1,13 @@
 nav {
   background: white;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 60px;
-  margin: 20px 0px;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  transition: top 0.3s;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
 
   @media (min-width: 1200px) {
     max-width: 1140px;

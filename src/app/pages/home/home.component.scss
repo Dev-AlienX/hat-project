@@ -38,11 +38,11 @@
             span {
               display: inline-block;
                 -webkit-animation-name: change;
-                -webkit-animation-duration: 2s;
-                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-duration: 0.6s;
+                -webkit-animation-iteration-count: 1;
                 animation-name: dataShow;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
+                animation-duration: 0.6s;
+                animation-iteration-count: 1;
             }
         }
 
@@ -73,30 +73,44 @@
 
 @keyframes dataShow {
  
-  0%{
-    transform: translate3d(0, 0, 0);
-  }
+//   0%{
+//     transform: translate3d(0, 0, 0);
+//   }
 
-  25% {
+//   25% {
+//     transform: translate3d(0, -25%, 0);
+//   }
+
+//   // 50% {
+//     // transform: translate3d(0, -50%, 0);
+//   // }
+
+//  75% {
+//     transform: translate3d(0, 0, 0);
+//   }
+
+//   80% {
+//     transform: translate3d(0, 0, 0);
+//   }
+
+//   100% {
+//     transform: translate3d(0, 0, 0);
+//   }
+
+  0% {
     transform: translate3d(0, -25%, 0);
   }
 
-  // 50% {
-    // transform: translate3d(0, -50%, 0);
-  // }
-
- 75% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  80% {
-    transform: translate3d(0, 0, 0);
+  50% {
+    transform: translate3d(0, 15%, 0);
   }
 
   100% {
     transform: translate3d(0, 0, 0);
   }
+
 }
+
 
 
 @keyframes dataHide {
