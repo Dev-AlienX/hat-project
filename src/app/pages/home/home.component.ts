@@ -20,7 +20,7 @@ import {
 export class HomeComponent implements OnInit, AfterViewInit {
 
   index;
-  startUpName = ["User Research", "User Experience", "Brand strategy + identiy", "Web/App Development"];
+  startUpName = ["User Research", "User Experience", "Brand strategy + identity", "Web/App Development"];
   showClass = true;
 
   @ViewChild("dataChange") data: ElementRef;
@@ -46,7 +46,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const p: HTMLParagraphElement = this.renderer.createElement('span');
     p.innerHTML = this.startUpName[this.index];
     const childElements = this.data.nativeElement.children;
-    debugger;
     if (childElements.length != 0) {
       for (let child of childElements) {
         this.renderer.removeChild(this.data.nativeElement, child);

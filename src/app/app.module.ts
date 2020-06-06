@@ -10,11 +10,13 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { WINDOW_PROVIDERS } from './service/window.service';
+import { FooterComponent } from './pages/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ServicesComponent
+    ServicesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
