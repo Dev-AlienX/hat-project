@@ -1,0 +1,109 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+
+  > h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  > .col {
+    width: 49.9%;
+    padding: 30px;
+  }
+
+  .col.contactDetail {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 80%;
+      width: 2px;
+      background-color: #e0e0e0;
+      right: 0;
+      top: 10%;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      > .col {
+        margin: 0 30px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 30px;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .col.contactForm{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+
+   .input-field{
+    height: 52px;
+    padding: 0 10px;
+    position: relative;
+    transition: all ease .3s;
+    margin-bottom: 23px;
+
+    input{
+      height: 45px;
+      min-width: 220px;
+      border-radius: 4px;
+      border: 1px solid #c2c2c2;
+      font-size: 16px;
+      margin-top: 7px;
+      padding: 13px;
+      color: #3a3838;
+      width: 100%;
+
+      &:focus, &.ng-valid{
+        border-color: #ec2786;
+        border-width: 2px;
+
+        &+label{
+          bottom: 38px;
+          // top: 2px;
+          font-size: 13px;
+          padding: 0 3px;
+          left: 23px
+        }
+      }
+    }
+
+    label{
+      font-size: 16px;
+      position: absolute;
+      background-color: white;
+      bottom: 14px;
+      left: 24px;
+      transition: all ease .3s;
+    }
+   }
+
+   .input-field:nth-child(1),
+   .input-field:nth-child(2){
+     width: 50%;
+   }
+
+   .input-field:nth-child(3),
+   button{
+     width: 100%;
+   }
+
+   button{
+     padding: 10px;
+     font-size: 16px;
+     margin: 10px;
+   }
+
+  }
+}

@@ -1,0 +1,52 @@
+<section>
+  <h3>Contact Us</h3>
+  <div class="col contactDetail">
+    <div class="row contacts">
+      <div class="col">
+        <h5>address :</h5>
+        <p>India, Asia, Earth</p>
+      </div>
+      <div class="col">
+        <h5>Mob No :</h5>
+        <p>+91 9999888877</p>
+      </div>
+      <div class="col">
+        <h5>Email</h5>
+        <p>hatproject@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="col contactForm">
+    <div class="input-field">
+      <input
+        type="text"
+        name="fullname"
+        id="fullname"
+        [(ngModel)]="fullname"
+        required
+      />
+      <label for="fullname">Name</label>
+    </div>
+    <div class="input-field">
+      <input
+        type="text"
+        name="Email"
+        id="Email" [(ngModel)]="email"
+        required
+      />
+     
+      <label for="Email">Email</label>
+    </div>
+    <div class="input-field">
+      <input
+        type="text"
+        name="massege"
+        id="massege"
+        [(ngModel)]="massege"
+        required
+      />
+      <label for="massege">massege</label>
+    </div>
+    <button>SEND</button>
+  </div>
+</section>
